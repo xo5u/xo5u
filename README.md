@@ -79,10 +79,6 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/xo5u/xo5u/output/snake.svg" alt="Snake animation" />
-
-###
-
 <div align="center">
   <img src="https://profile-counter.glitch.me/xo5u/count.svg?"  />
 </div>
