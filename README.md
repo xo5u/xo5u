@@ -2,15 +2,15 @@
 
 ###
 
-<div align="left">
-  <img height="150" src="https://i.giphy.com/bGgsc5mWoryfgKBx1u.webp"  />
-</div>
+<br clear="both">
+
+<img align="right" height="150" src="https://i.giphy.com/bGgsc5mWoryfgKBx1u.webp"  />
 
 ###
 
 <br clear="both">
 
-<p align="left">contact information</p>
+<h3 align="center">contact information</h3>
 
 ###
 
