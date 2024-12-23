@@ -84,3 +84,7 @@
 </div>
 
 ###
+
+<img src="https://raw.githubusercontent.com/xo5u/xo5u/output/snake.svg" alt="Snake animation" />
+
+###
