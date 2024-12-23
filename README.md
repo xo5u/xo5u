@@ -3,7 +3,7 @@
 ###
 
 <div align="left">
-  <img height="200" src="https://i.giphy.com/bGgsc5mWoryfgKBx1u.webp"  />
+  <img height="150" src="https://i.giphy.com/bGgsc5mWoryfgKBx1u.webp"  />
 </div>
 
 ###
@@ -14,11 +14,11 @@
 
 ###
 
-<div align="left">
+<div align="center">
   <a href="https://www.instagram.com/xo5u" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
   </a>
-  <a href="mailto:saeedeanb87@gmail.com">
+  <a href="mailto:saeedeanb87@gmail.com" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
   </a>
 </div>
@@ -35,11 +35,11 @@
 
 ###
 
-<h6 align="left">Languages</h6>
+<h3 align="center">Languages</h3>
 
 ###
 
-<div align="left">
+<div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" alt="c logo"  />
@@ -53,11 +53,13 @@
 
 ###
 
-<p align="left">upcoming language</p>
+<br clear="both">
+
+<p align="center">upcoming language</p>
 
 ###
 
-<div align="left">
+<div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
@@ -86,3 +88,37 @@
 </div>
 
 ###
+
+name: Generate snake animation
+
+on:
+  schedule: # execute every 12 hours
+    - cron: "* */12 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - master
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: xo5u
+          outputs: dist/snake.svg?palette=github-dark
+
+      - name: push snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
